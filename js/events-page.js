@@ -38,6 +38,9 @@
 
     return `
       <article class="event-flyer-card">
+        <div class="event-flyer-card-header">
+          <h3>${event.title}</h3>
+        </div>
         <div class="event-flyer-card-image">
           <img src="${event.flyer}" alt="${event.title} event flyer" loading="lazy">
         </div>
@@ -46,7 +49,6 @@
             <time datetime="${event.date}">${formatDate(event.date)}</time>
             ${timeLabel ? `<span>${timeLabel}</span>` : ""}
           </div>
-          <h3>${event.title}</h3>
           <p>${event.description}</p>
           ${location}
         </div>
