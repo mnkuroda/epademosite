@@ -956,7 +956,7 @@ a:hover {
 /* Calendar page */
 .events-page-layout {
   display: grid;
-  grid-template-columns: minmax(300px, 400px) 1fr;
+  grid-template-columns: minmax(360px, 440px) 1fr;
   gap: 2rem;
   align-items: start;
 }
@@ -991,6 +991,17 @@ a:hover {
   padding-right: 0.25rem;
 }
 
+.events-photo-cta {
+  margin-top: 1.25rem;
+}
+
+.events-photo-cta .btn {
+  width: 100%;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.4;
+}
+
 .event-flyer-card {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -1017,14 +1028,29 @@ a:hover {
   line-height: 1.35;
 }
 
+.event-flyer-card-header .event-flyer-card-meta {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
 .event-flyer-card-image {
   background: var(--color-bg);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  padding: 0.75rem;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
 }
 
 .event-flyer-card-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   display: block;
+  object-fit: contain;
 }
 
 .event-flyer-card-body {

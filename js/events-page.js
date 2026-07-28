@@ -30,25 +30,32 @@
     return eventDate >= today;
   }
 
-  function renderEventCard(event) {
+  function renderEventCard(event, options = {}) {
+    const { dateInHeader = false } = options;
     const timeLabel = formatTimeRange(event.time, event.endTime);
     const location = event.location
       ? `<p class="event-flyer-card-location">${event.location}</p>`
       : "";
+    const meta = `
+          <div class="event-flyer-card-meta">
+            <time datetime="${event.date}">${formatDate(event.date)}</time>
+            ${timeLabel ? `<span>${timeLabel}</span>` : ""}
+          </div>`;
+
+    const headerMeta = dateInHeader ? meta : "";
+    const bodyMeta = dateInHeader ? "" : meta;
 
     return `
-      <article class="event-flyer-card">
+      <article class="event-flyer-card${dateInHeader ? " event-flyer-card--list" : ""}">
         <div class="event-flyer-card-header">
           <h3>${event.title}</h3>
+          ${headerMeta}
         </div>
         <div class="event-flyer-card-image">
           <img src="${event.flyer}" alt="${event.title} event flyer" loading="lazy">
         </div>
         <div class="event-flyer-card-body">
-          <div class="event-flyer-card-meta">
-            <time datetime="${event.date}">${formatDate(event.date)}</time>
-            ${timeLabel ? `<span>${timeLabel}</span>` : ""}
-          </div>
+          ${bodyMeta}
           <p>${event.description}</p>
           ${location}
         </div>
@@ -61,7 +68,7 @@
     );
   }
 
-  function renderEventsList(container, limit) {
+  function renderEventsList(container, limit, options = {}) {
     if (!container || typeof UPCOMING_EVENTS === "undefined") return;
 
     const events = limit ? getUpcomingEvents().slice(0, limit) : getUpcomingEvents();
@@ -72,11 +79,11 @@
       return;
     }
 
-    container.innerHTML = events.map(renderEventCard).join("");
+    container.innerHTML = events.map((event) => renderEventCard(event, options)).join("");
   }
 
   function initEventsPage() {
-    renderEventsList(document.getElementById("upcoming-events-list"));
+    renderEventsList(document.getElementById("upcoming-events-list"), null, { dateInHeader: true });
     renderEventsList(document.getElementById("home-upcoming-events"), 4);
   }
 
