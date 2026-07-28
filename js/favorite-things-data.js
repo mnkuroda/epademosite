@@ -150,22 +150,5 @@ const FAVORITE_THINGS = [
       { name: "Kelly Phillips", url: "https://weareepa.weebly.com/uploads/9/0/1/2/90127147/kelly_phillips.pdf" },
       { name: "Jennifer Snyder", url: "https://weareepa.weebly.com/uploads/9/0/1/2/90127147/jennifer_snyder.pdf" }
     ]
-  },
-  {
-    id: "teacher-wishlists",
-    title: "Teacher Wishlists",
-    description: "Help support our teachers by fulfilling their classroom wishlists.",
-    items: [
-      { name: "Kindergarten", url: "https://weareepa.weebly.com/kindergarten.html" },
-      { name: "1st Grade", url: "https://weareepa.weebly.com/1st-grade.html" },
-      { name: "2nd Grade", url: "https://weareepa.weebly.com/2nd-grade.html" },
-      { name: "3rd Grade", url: "https://weareepa.weebly.com/3rd-grade.html" },
-      { name: "4th Grade", url: "https://weareepa.weebly.com/4th-grade.html" },
-      { name: "5th Grade", url: "https://weareepa.weebly.com/5th-grade.html" },
-      { name: "6th Grade", url: "https://weareepa.weebly.com/6th-grade.html" },
-      { name: "7th Grade", url: "https://weareepa.weebly.com/7th-grade.html" },
-      { name: "8th Grade", url: "https://weareepa.weebly.com/8th-grade.html" },
-      { name: "EC", url: "https://weareepa.weebly.com/ec1.html" }
-    ]
   }
 ];
