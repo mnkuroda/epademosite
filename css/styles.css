@@ -73,6 +73,10 @@ a:hover {
   width: min(1280px, calc(100% - 2rem));
 }
 
+.container--events-home {
+  width: min(1520px, calc(100% - 2.5rem));
+}
+
 .container--narrow {
   width: min(800px, calc(100% - 2rem));
   margin-inline: auto;
@@ -1064,9 +1068,21 @@ a:hover {
 
 .home-events-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem;
   margin-bottom: 2rem;
+}
+
+.home-events-section .event-flyer-card-header h3 {
+  font-size: 1.15rem;
+}
+
+.home-events-section .event-flyer-card-body {
+  padding: 1.15rem 1.25rem 1.35rem;
+}
+
+.home-events-section .event-flyer-card-body p {
+  font-size: 0.95rem;
 }
 
 .home-events-cta {
