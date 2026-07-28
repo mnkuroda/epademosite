@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EPA events calendar — meetings, spirit days, fundraisers, family events, and volunteer opportunities at Envision Science Academy.">
+  <title>Events &amp; Calendar — Envision Parents in Action</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="utility-bar">
+      <div class="utility-bar-inner">
+        <p>Supporting students, teachers &amp; school culture at Envision Science Academy</p>
+        <div class="utility-bar-links">
+          <a href="https://mailchi.mp/8a780be87146/epa-weekly-newsletter-8342409" target="_blank" rel="noopener noreferrer">Newsletter</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Main">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/images/logo.png" alt="EPA logo" width="48" height="48">
+        <span class="nav-logo-text">
+          <span class="nav-logo-name">Envision Parents in Action</span>
+          <span class="nav-logo-sub">Envision Science Academy</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html" aria-current="page">Events &amp; Calendar</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="get-involved.html">Get Involved</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="get-involved.html">Get Involved</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-hero">
+      <div class="container">
+        <h1>Events &amp; Calendar</h1>
+        <p>Meetings, spirit events, fundraisers, family nights, and volunteer opportunities</p>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container container--wide">
+        <div class="cal-toolbar">
+          <div class="cal-nav">
+            <button id="cal-prev" aria-label="Previous month">←</button>
+            <span id="cal-month-label"></span>
+            <button id="cal-next" aria-label="Next month">→</button>
+            <button id="cal-today" class="filter-btn" style="margin-left: 0.5rem;">Today</button>
+          </div>
+          <div class="view-toggle">
+            <button data-view="calendar" class="is-active">Calendar</button>
+            <button data-view="list">List</button>
+          </div>
+          <div class="cal-filters">
+            <button class="filter-btn is-active" data-filter="">All</button>
+            <button class="filter-btn" data-filter="meeting">Meetings</button>
+            <button class="filter-btn" data-filter="spirit">Spirit</button>
+            <button class="filter-btn" data-filter="fundraiser">Fundraisers</button>
+            <button class="filter-btn" data-filter="family">Family</button>
+            <button class="filter-btn" data-filter="volunteer">Volunteer</button>
+          </div>
+        </div>
+
+        <div id="calendar-view">
+          <div class="cal-page-layout">
+            <div class="cal-panel">
+              <div id="calendar-grid"></div>
+              <div class="category-legend">
+                <span class="legend-item"><span class="legend-dot" style="background:#2b6cb0"></span> Meetings</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#805ad5"></span> Spirit</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#d69e2e"></span> Fundraisers</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#38a169"></span> Family Events</span>
+                <span class="legend-item"><span class="legend-dot" style="background:#dd6b20"></span> Volunteer</span>
+              </div>
+            </div>
+            <aside class="cal-sidebar">
+              <div class="cal-panel" id="cal-day-detail">
+                <p class="cal-detail-empty">Click a highlighted date to see events for that day.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+
+        <div id="list-view" class="is-hidden">
+          <div class="event-list" id="event-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong style="color: #fff; font-size: 1.1rem;">Envision Parents in Action</strong>
+          <p>A non-profit organization supporting students, teachers, and school culture at Envision Science Academy.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="events.html">Events &amp; Calendar</a></li>
+            <li><a href="about.html">About EPA</a></li>
+            <li><a href="team.html">Our Team</a></li>
+            <li><a href="get-involved.html">Get Involved</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="get-involved.html#spirit">Spirit Shop</a></li>
+            <li><a href="get-involved.html#shop-earn">Shop &amp; Earn</a></li>
+            <li><a href="get-involved.html#minutes">Meeting Minutes</a></li>
+            <li><a href="https://mailchi.mp/8a780be87146/epa-weekly-newsletter-8342409" target="_blank" rel="noopener noreferrer">Newsletter</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:info@weareepa.org">info@weareepa.org</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Envision Parents in Action</span>
+        <span>Envision Science Academy · Wake Forest, NC</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/events-data.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
