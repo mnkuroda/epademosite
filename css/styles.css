@@ -362,6 +362,21 @@ a:hover {
   color: #fff;
 }
 
+.nav-member-item {
+  margin-left: auto;
+}
+
+.nav-menu a.nav-member {
+  background: #790606;
+  color: #fff;
+  margin-left: 0.25rem;
+}
+
+.nav-menu a.nav-member:hover {
+  background: #5c0404;
+  color: #fff;
+}
+
 .nav-menu a:hover,
 .nav-menu a[aria-current="page"] {
   background: rgba(43, 108, 176, 0.08);
@@ -1924,6 +1939,19 @@ a:hover {
 
   .nav-menu a.nav-calendar {
     margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    border-bottom: none;
+    border-radius: 8px;
+  }
+
+  .nav-member-item {
+    margin-left: 0;
+    margin-top: 0.75rem;
+  }
+
+  .nav-menu a.nav-member {
+    display: block;
     padding: 0.75rem 1rem;
     text-align: center;
     border-bottom: none;
