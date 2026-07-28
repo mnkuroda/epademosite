@@ -331,7 +331,8 @@ a:hover {
   list-style: none;
   margin: 0;
   padding: 0;
-  flex-shrink: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .nav-menu li {
@@ -362,8 +363,12 @@ a:hover {
   color: #fff;
 }
 
-.nav-member-item {
+.nav-calendar-item {
   margin-left: auto;
+}
+
+.nav-member-item {
+  margin-left: 0;
 }
 
 .nav-menu a.nav-member {
@@ -1943,6 +1948,11 @@ a:hover {
     text-align: center;
     border-bottom: none;
     border-radius: 8px;
+  }
+
+  .nav-calendar-item {
+    margin-left: 0;
+    margin-top: 0.75rem;
   }
 
   .nav-member-item {
