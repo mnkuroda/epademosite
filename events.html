@@ -22,9 +22,15 @@
       </div>
     </div>
     <nav class="nav" aria-label="Main">
-      <a class="nav-logo" href="index.html">
-        <img src="assets/images/logo.png" alt="Envision Parents in Action">
-      </a>
+      <div class="nav-brand">
+        <a class="nav-logo" href="index.html">
+          <img src="assets/images/logo.png" alt="">
+        </a>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Envision Parents in Action</span>
+          <span class="nav-logo-sub">Envision Science Academy</span>
+        </div>
+      </div>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -49,50 +55,18 @@
 
     <section class="section">
       <div class="container container--wide">
-        <div class="cal-toolbar">
-          <div class="cal-nav">
-            <button id="cal-prev" aria-label="Previous month">←</button>
-            <span id="cal-month-label"></span>
-            <button id="cal-next" aria-label="Next month">→</button>
-            <button id="cal-today" class="filter-btn" style="margin-left: 0.5rem;">Today</button>
-          </div>
-          <div class="view-toggle">
-            <button data-view="calendar" class="is-active">Calendar</button>
-            <button data-view="list">List</button>
-          </div>
-          <div class="cal-filters">
-            <button class="filter-btn is-active" data-filter="">All</button>
-            <button class="filter-btn" data-filter="meeting">Meetings</button>
-            <button class="filter-btn" data-filter="spirit">Spirit</button>
-            <button class="filter-btn" data-filter="fundraiser">Fundraisers</button>
-            <button class="filter-btn" data-filter="family">Family</button>
-            <button class="filter-btn" data-filter="volunteer">Volunteer</button>
-          </div>
+        <div class="gcal-embed gcal-embed--full">
+          <iframe
+            title="ESA school calendar"
+            src="https://calendar.google.com/calendar/embed?src=epasecretary%40envisionscienceacademy.com&ctz=America%2FNew_York&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&bgcolor=%23ffffff&color=%232B6CB0"
+            loading="lazy">
+          </iframe>
         </div>
-
-        <div id="calendar-view">
-          <div class="cal-page-layout">
-            <div class="cal-panel">
-              <div id="calendar-grid"></div>
-              <div class="category-legend">
-                <span class="legend-item"><span class="legend-dot" style="background:#2b6cb0"></span> Meetings</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#805ad5"></span> Spirit</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#d69e2e"></span> Fundraisers</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#38a169"></span> Family Events</span>
-                <span class="legend-item"><span class="legend-dot" style="background:#dd6b20"></span> Volunteer</span>
-              </div>
-            </div>
-            <aside class="cal-sidebar">
-              <div class="cal-panel" id="cal-day-detail">
-                <p class="cal-detail-empty">Click a highlighted date to see events for that day.</p>
-              </div>
-            </aside>
-          </div>
-        </div>
-
-        <div id="list-view" class="is-hidden">
-          <div class="event-list" id="event-list"></div>
-        </div>
+        <p class="gcal-footer">
+          Events from <a href="mailto:epasecretary@envisionscienceacademy.com">epasecretary@envisionscienceacademy.com</a>
+          · Times shown in Eastern Time
+          · <a href="https://calendar.google.com/calendar/u/0?cid=ZXBhc2VjcmV0YXJ5QGVudmlzaW9uc2NpZW5jZWFjYWRlbXkuY29t" target="_blank" rel="noopener noreferrer">Add to Google Calendar</a>
+        </p>
       </div>
     </section>
   </main>
@@ -137,8 +111,6 @@
     </div>
   </footer>
 
-  <script src="js/events-data.js"></script>
-  <script src="js/calendar.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

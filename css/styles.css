@@ -115,11 +115,19 @@ a:hover {
 .nav {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: flex-start;
+  gap: 2rem;
   width: min(1200px, calc(100% - 2rem));
   margin-inline: auto;
   min-height: var(--nav-height);
-  padding: 0.35rem 0;
+  padding: 0.5rem 0;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-shrink: 0;
 }
 
 .nav-logo {
@@ -127,15 +135,33 @@ a:hover {
   align-items: center;
   color: var(--color-navy);
   flex-shrink: 0;
-  margin-right: auto;
 }
 
 .nav-logo img {
-  height: 42px;
+  height: 58px;
   width: auto;
-  max-width: 150px;
+  max-width: 200px;
   object-fit: contain;
   object-position: left center;
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.nav-logo-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-navy);
+}
+
+.nav-logo-sub {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 .nav-menu {
@@ -279,26 +305,8 @@ a:hover {
 .hero {
   position: relative;
   overflow: hidden;
-  background: var(--color-navy);
+  background: #790606;
   color: #fff;
-}
-
-.hero-bg {
-  position: absolute;
-  inset: 0;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.35;
-}
-
-.hero-bg-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(26, 54, 93, 0.92) 0%, rgba(43, 108, 176, 0.75) 100%);
 }
 
 .hero-inner {
@@ -454,6 +462,124 @@ a:hover {
 
 .cal-day--today .cal-dot {
   background: rgba(255, 255, 255, 0.8) !important;
+}
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-logo img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.hero-inner--simple {
+  grid-template-columns: 1fr;
+  max-width: 720px;
+}
+
+.section-eyebrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin: 0 0 0.5rem;
+}
+
+/* Google Calendar embed */
+.gcal-embed {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.gcal-embed iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+.gcal-embed--agenda iframe {
+  height: 480px;
+}
+
+.gcal-embed--full iframe {
+  height: 700px;
+}
+
+.gcal-footer {
+  text-align: center;
+  margin: 1rem 0 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* Rent the Rock promo */
+.rock-promo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.rock-promo-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.rock-promo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 320px;
+}
+
+.rock-promo-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  color: var(--color-navy);
+  margin: 0 0 0.75rem;
+  font-weight: 400;
+}
+
+.rock-promo-content > p {
+  margin: 0 0 1rem;
+  color: var(--color-text);
+}
+
+.rock-promo-list {
+  margin: 0 0 1.5rem;
+  padding-left: 1.25rem;
+}
+
+.rock-promo-list li {
+  margin-bottom: 0.4rem;
+  color: var(--color-muted);
+}
+
+.rock-promo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.rock-promo-note {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 0;
 }
 
 /* Sections */
@@ -930,8 +1056,95 @@ a:hover {
   margin-bottom: 0.15rem;
 }
 
+/* Spirit shop cards */
+.spirit-shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.spirit-shop-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  color: var(--color-text);
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+
+.spirit-shop-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--color-blue);
+  color: var(--color-text);
+}
+
+.spirit-shop-card-image {
+  aspect-ratio: 16 / 10;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.spirit-shop-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.spirit-shop-card:hover .spirit-shop-card-image img {
+  transform: scale(1.04);
+}
+
+.spirit-shop-card-body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.spirit-shop-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--color-navy);
+  margin: 0 0 0.5rem;
+  font-weight: 400;
+}
+
+.spirit-shop-card-body p {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+.spirit-shop-card-cta {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-blue);
+}
+
+.spirit-shop-card:hover .spirit-shop-card-cta {
+  color: var(--color-navy);
+}
+
+.spirit-shop-note {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
 /* Shop & earn cards */
 .program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.25rem;
@@ -1121,6 +1334,22 @@ a:hover {
     padding: 3rem 0;
   }
 
+  .rock-promo {
+    grid-template-columns: 1fr;
+  }
+
+  .spirit-shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gcal-embed--full iframe {
+    height: 600px;
+  }
+
+  .gcal-embed--agenda iframe {
+    height: 420px;
+  }
+
   .mini-cal {
     max-width: 360px;
   }
@@ -1147,8 +1376,13 @@ a:hover {
     display: flex;
   }
 
-  .nav-logo {
-    margin-right: 0;
+  .nav-logo-text {
+    display: none;
+  }
+
+  .nav-logo img {
+    height: 48px;
+    max-width: 160px;
   }
 
   .nav-menu {

@@ -22,9 +22,15 @@
       </div>
     </div>
     <nav class="nav" aria-label="Main">
-      <a class="nav-logo" href="index.html">
-        <img src="assets/images/logo.png" alt="Envision Parents in Action">
-      </a>
+      <div class="nav-brand">
+        <a class="nav-logo" href="index.html">
+          <img src="assets/images/logo.png" alt="">
+        </a>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Envision Parents in Action</span>
+          <span class="nav-logo-sub">Envision Science Academy</span>
+        </div>
+      </div>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -41,10 +47,6 @@
 
   <main>
     <section class="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <img src="assets/images/banner.png" alt="" width="1200" height="400">
-        <div class="hero-bg-overlay"></div>
-      </div>
       <div class="container hero-inner">
         <div class="hero-content">
           <p class="hero-eyebrow">Wake Forest, NC</p>
@@ -55,16 +57,40 @@
           </p>
           <div class="hero-actions">
             <a class="btn btn-gold" href="events.html">Upcoming Events</a>
-            <a class="btn btn-secondary" href="get-involved.html">Get Involved</a>
+            <a class="btn btn-secondary" href="#rent-the-rock">Rent the Rock</a>
           </div>
         </div>
-        <aside class="mini-cal" aria-label="This month's calendar">
-          <div class="mini-cal-header">
-            <span class="mini-cal-label">This Month</span>
-            <a class="mini-cal-link" href="events.html">Full calendar →</a>
+        <div class="hero-logo">
+          <img src="assets/images/logo.png" alt="Envision Parents in Action">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="rent-the-rock">
+      <div class="container">
+        <div class="rock-promo">
+          <div class="rock-promo-image">
+            <img src="assets/images/spirit-rock.jpg" alt="Students celebrating a birthday at the ESA Spirit Rock">
           </div>
-          <div id="mini-calendar"></div>
-        </aside>
+          <div class="rock-promo-content">
+            <p class="section-eyebrow">Celebrate at ESA</p>
+            <h2>Rent the Rock</h2>
+            <p>
+              Reserve the ESA Spirit Rock for birthdays, achievements, and special occasions.
+              Paint it, celebrate, and make someone's day!
+            </p>
+            <ul class="rock-promo-list">
+              <li>Reserve your date — one family per day</li>
+              <li>Paint it however you'd like for your celebration</li>
+              <li>Rental fees support EPA programs</li>
+            </ul>
+            <div class="rock-promo-actions">
+              <a class="btn btn-primary" href="mailto:spiritrock@weareepa.org?subject=Spirit%20Rock%20Reservation%20Request">Reserve the Rock</a>
+              <a class="btn btn-secondary" href="events.html">Check Availability</a>
+            </div>
+            <p class="rock-promo-note">Questions? Email <a href="mailto:spiritrock@weareepa.org">spiritrock@weareepa.org</a></p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -72,12 +98,50 @@
       <div class="container">
         <div class="section-header">
           <h2>Upcoming Events</h2>
-          <p>Mark your calendar — here's what's coming up next.</p>
+          <p>School events, spirit days, and important dates from the ESA calendar.</p>
         </div>
-        <div class="events-grid" id="upcoming-events"></div>
-        <p style="text-align: center; margin-top: 2rem;">
-          <a class="btn btn-primary" href="events.html">See All Events</a>
+        <div class="gcal-embed gcal-embed--agenda">
+          <iframe
+            title="ESA upcoming events calendar"
+            src="https://calendar.google.com/calendar/embed?src=epasecretary%40envisionscienceacademy.com&ctz=America%2FNew_York&mode=AGENDA&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&bgcolor=%23ffffff&color=%232B6CB0"
+            loading="lazy">
+          </iframe>
+        </div>
+        <p class="gcal-footer">
+          <a href="https://calendar.google.com/calendar/u/0?cid=ZXBhc2VjcmV0YXJ5QGVudmlzaW9uc2NpZW5jZWFjYWRlbXkuY29t" target="_blank" rel="noopener noreferrer">Add to Google Calendar</a>
+          · <a href="events.html">Full calendar →</a>
         </p>
+      </div>
+    </section>
+
+    <section class="section" id="spirit-shop">
+      <div class="container">
+        <div class="section-header">
+          <h2>ESA Spirit Shop</h2>
+          <p>Official ESA spirit gear from our approved vendors.</p>
+        </div>
+        <div class="spirit-shop-grid">
+          <a class="spirit-shop-card" href="http://my.cheddarup.com/c/epa-spirit-wear" target="_blank" rel="noopener noreferrer">
+            <div class="spirit-shop-card-image">
+              <img src="assets/images/spirit-shirts.png" alt="ESA spirit shirts, blankets, and accessories">
+            </div>
+            <div class="spirit-shop-card-body">
+              <h3>EPA Spirit Shop</h3>
+              <p>Spirit T-shirts, blankets, towels, water bottles, pens, decals &amp; more.</p>
+              <span class="spirit-shop-card-cta">Shop EPA Gear →</span>
+            </div>
+          </a>
+          <a class="spirit-shop-card" href="https://capitalpromo.tuosystems.com/stores/26-27" target="_blank" rel="noopener noreferrer">
+            <div class="spirit-shop-card-image">
+              <img src="assets/images/spirit-outerwear.png" alt="ESA sweatshirts and outerwear">
+            </div>
+            <div class="spirit-shop-card-body">
+              <h3>Outerwear</h3>
+              <p>Sweatshirts, hoodies, and outerwear through Capital Promotions.</p>
+              <span class="spirit-shop-card-cta">Shop Outerwear →</span>
+            </div>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -88,15 +152,20 @@
           <p>Everything you need to stay connected and support our school.</p>
         </div>
         <div class="quick-links">
+          <a class="quick-link-card" href="#rent-the-rock">
+            <span class="quick-link-icon" aria-hidden="true">🪨</span>
+            <h3>Rent the Rock</h3>
+            <p>Reserve the Spirit Rock for birthdays and celebrations.</p>
+          </a>
           <a class="quick-link-card" href="events.html">
             <span class="quick-link-icon" aria-hidden="true">📅</span>
             <h3>Events &amp; Calendar</h3>
             <p>Browse the full calendar, filter by category, and never miss an event.</p>
           </a>
-          <a class="quick-link-card" href="get-involved.html#spirit">
+          <a class="quick-link-card" href="#spirit-shop">
             <span class="quick-link-icon" aria-hidden="true">👕</span>
             <h3>Spirit Shop</h3>
-            <p>Spirit shirts, blankets, water bottles, decals &amp; more.</p>
+            <p>Shop EPA gear and official outerwear online.</p>
           </a>
           <a class="quick-link-card" href="get-involved.html#shop-earn">
             <span class="quick-link-icon" aria-hidden="true">🛒</span>
@@ -175,8 +244,6 @@
     </div>
   </footer>
 
-  <script src="js/events-data.js"></script>
-  <script src="js/calendar.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
