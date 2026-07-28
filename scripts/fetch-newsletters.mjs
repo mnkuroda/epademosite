@@ -36,10 +36,25 @@ function extractMeta(html, property) {
 }
 
 function extractImage(html) {
+  const imgSrcs = [...html.matchAll(/<img[^>]+src=["']([^"']+)["'][^>]*>/gi)]
+    .map((match) => match[1])
+    .filter(
+      (src) =>
+        src.includes("mcusercontent.com") &&
+        !src.includes("cdn-images.mailchimp.com")
+    );
+
+  if (imgSrcs.length) return imgSrcs[0];
+
+  const inlineMatch = html.match(
+    /https:\/\/mcusercontent\.com\/[^"'\s>]+\.(?:png|jpe?g|gif|webp)/i
+  );
+  if (inlineMatch) return inlineMatch[0];
+
   return (
     extractMeta(html, "og:image") ||
     extractMeta(html, "twitter:image:src") ||
-    (html.match(/<img[^>]+src=["']([^"']+)["']/i)?.[1] ?? "")
+    ""
   );
 }
 
