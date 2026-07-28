@@ -24,6 +24,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Fetch newsletters from Mailchimp
+        run: node scripts/fetch-newsletters.mjs
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:

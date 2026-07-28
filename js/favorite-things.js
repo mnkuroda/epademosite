@@ -13,7 +13,10 @@
       .map(
         (group) => `
         <details class="accordion-sub">
-          <summary>${group.title}<span class="accordion-count">${group.items.length}</span></summary>
+          <summary>
+            <span class="accordion-title">${group.title}</span>
+            <span class="accordion-count">${group.items.length}</span>
+          </summary>
           <div class="accordion-sub-panel">${renderLinkList(group.items)}</div>
         </details>`
       )

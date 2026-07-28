@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Staff Favorite Things at Envision Science Academy — find gift ideas for teachers and staff by department or grade level.">
-  <title>Favorite Things — Envision Parents in Action</title>
+  <meta name="description" content="Browse past EPA weekly newsletters and subscribe for school updates from Envision Parents in Action.">
+  <title>Newsletter — Envision Parents in Action</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
       <div class="utility-bar-inner">
         <p>Supporting ESA students, teachers &amp; school culture</p>
         <div class="utility-bar-links">
-          <a href="newsletter.html">Newsletter</a>
+          <a href="newsletter.html" aria-current="page">Newsletter</a>
           <a href="contact.html">Contact Us</a>
         </div>
       </div>
@@ -38,7 +38,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="team.html">Team</a></li>
-        <li><a href="favorite-things.html" aria-current="page">Favorites</a></li>
+        <li><a href="favorite-things.html">Favorites</a></li>
         <li><a href="get-involved.html">Get Involved</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="events.html" class="nav-calendar">Calendar</a></li>
@@ -49,23 +49,31 @@
   <main>
     <div class="page-hero">
       <div class="container">
-        <h1>Favorite Things</h1>
-        <p>Gift ideas for our faculty and staff</p>
+        <h1>EPA Newsletter</h1>
+        <p>Bi-monthly updates for ESA families</p>
       </div>
     </div>
 
     <section class="section">
-      <div class="container container--narrow">
-        <div class="content-block content-block--center">
-          <p>
-            We are very proud of our faculty and staff. During the spring we honor our teachers
-            with treats during Teacher Appreciation Month. If you would like to supply a treat at a
-            holiday or just because, here are their Favorite Things.
-          </p>
-          <p>Click a department or grade level below to browse staff favorites.</p>
+      <div class="container">
+        <div class="newsletter-intro">
+          <div class="newsletter-intro-copy">
+            <p class="section-eyebrow">Stay in the loop</p>
+            <h2>Your source for school news</h2>
+            <p>
+              EPA sends a bi-monthly newsletter with upcoming events, volunteer opportunities,
+              spirit days, and important reminders. Browse past issues below or subscribe to get
+              updates delivered to your inbox.
+            </p>
+          </div>
+          <div class="newsletter-intro-actions" id="subscribe">
+            <a class="btn btn-primary" id="newsletter-subscribe" href="#" target="_blank" rel="noopener noreferrer">Subscribe</a>
+            <a class="btn btn-secondary" id="newsletter-archive" href="#" target="_blank" rel="noopener noreferrer">Mailchimp Archive</a>
+          </div>
         </div>
 
-        <div class="accordion" id="favorite-things-accordion" aria-label="Staff favorite things by department"></div>
+        <div class="newsletter-feed" id="newsletter-feed" aria-live="polite"></div>
+        <p class="newsletter-updated" id="newsletter-updated"></p>
       </div>
     </section>
   </main>
@@ -90,10 +98,10 @@
           <h4>Resources</h4>
           <ul>
             <li><a href="favorite-things.html">Favorite Things</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
             <li><a href="get-involved.html#spirit">Spirit Shop</a></li>
             <li><a href="get-involved.html#shop-earn">Shop &amp; Earn</a></li>
             <li><a href="get-involved.html#minutes">Meeting Minutes</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -111,8 +119,8 @@
     </div>
   </footer>
 
-  <script src="js/favorite-things-data.js"></script>
-  <script src="js/favorite-things.js"></script>
+  <script src="js/newsletter-data.js"></script>
+  <script src="js/newsletter.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
