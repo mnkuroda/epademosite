@@ -55,13 +55,16 @@
       </article>`;
   }
 
-  function initEventsPage() {
-    const container = document.getElementById("upcoming-events-list");
-    if (!container || typeof UPCOMING_EVENTS === "undefined") return;
-
-    const events = UPCOMING_EVENTS.filter((event) => isUpcoming(event.date)).sort(
+  function getUpcomingEvents() {
+    return UPCOMING_EVENTS.filter((event) => isUpcoming(event.date)).sort(
       (a, b) => new Date(a.date) - new Date(b.date)
     );
+  }
+
+  function renderEventsList(container, limit) {
+    if (!container || typeof UPCOMING_EVENTS === "undefined") return;
+
+    const events = limit ? getUpcomingEvents().slice(0, limit) : getUpcomingEvents();
 
     if (!events.length) {
       container.innerHTML =
@@ -70,6 +73,11 @@
     }
 
     container.innerHTML = events.map(renderEventCard).join("");
+  }
+
+  function initEventsPage() {
+    renderEventsList(document.getElementById("upcoming-events-list"));
+    renderEventsList(document.getElementById("home-upcoming-events"), 4);
   }
 
   document.addEventListener("DOMContentLoaded", initEventsPage);

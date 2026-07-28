@@ -1062,6 +1062,17 @@ a:hover {
   margin: 0;
 }
 
+.home-events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.home-events-cta {
+  text-align: center;
+}
+
 .events-calendar-panel {
   position: sticky;
   top: calc(var(--nav-height) + 1rem);
@@ -1984,6 +1995,10 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
+  .home-events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .events-upcoming-list {
     max-height: none;
     overflow: visible;
@@ -2143,6 +2158,10 @@ a:hover {
 
 @media (max-width: 480px) {
   .newsletter-feed {
+    grid-template-columns: 1fr;
+  }
+
+  .home-events-grid {
     grid-template-columns: 1fr;
   }
 }
