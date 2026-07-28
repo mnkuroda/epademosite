@@ -57,18 +57,34 @@
 
     <section class="section">
       <div class="container container--wide">
-        <div class="gcal-embed gcal-embed--full">
-          <iframe
-            title="ESA school calendar"
-            src="https://calendar.google.com/calendar/embed?src=epasecretary%40envisionscienceacademy.com&ctz=America%2FNew_York&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&bgcolor=%23ffffff&color=%232B6CB0"
-            loading="lazy">
-          </iframe>
+        <div class="events-page-layout">
+          <aside class="events-upcoming" aria-label="Upcoming events">
+            <div class="events-upcoming-header">
+              <h2>Upcoming Events</h2>
+              <p>Don't miss scheduled spirit events, fundraisers, and family nights.</p>
+            </div>
+            <div class="events-upcoming-list" id="upcoming-events-list"></div>
+          </aside>
+
+          <div class="events-calendar-panel">
+            <div class="events-calendar-header">
+              <h2>School Calendar</h2>
+              <p>Meetings, spirit days, and important dates from ESA.</p>
+            </div>
+            <div class="gcal-embed gcal-embed--full">
+              <iframe
+                title="ESA school calendar"
+                src="https://calendar.google.com/calendar/embed?src=epasecretary%40envisionscienceacademy.com&ctz=America%2FNew_York&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&bgcolor=%23ffffff&color=%232B6CB0"
+                loading="lazy">
+              </iframe>
+            </div>
+            <p class="gcal-footer">
+              Events from <a href="mailto:epasecretary@envisionscienceacademy.com">epasecretary@envisionscienceacademy.com</a>
+              · Times shown in Eastern Time
+              · <a href="https://calendar.google.com/calendar/u/0?cid=ZXBhc2VjcmV0YXJ5QGVudmlzaW9uc2NpZW5jZWFjYWRlbXkuY29t" target="_blank" rel="noopener noreferrer">Add to Google Calendar</a>
+            </p>
+          </div>
         </div>
-        <p class="gcal-footer">
-          Events from <a href="mailto:epasecretary@envisionscienceacademy.com">epasecretary@envisionscienceacademy.com</a>
-          · Times shown in Eastern Time
-          · <a href="https://calendar.google.com/calendar/u/0?cid=ZXBhc2VjcmV0YXJ5QGVudmlzaW9uc2NpZW5jZWFjYWRlbXkuY29t" target="_blank" rel="noopener noreferrer">Add to Google Calendar</a>
-        </p>
       </div>
     </section>
   </main>
@@ -114,6 +130,8 @@
     </div>
   </footer>
 
+  <script src="js/events-upcoming-data.js"></script>
+  <script src="js/events-page.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

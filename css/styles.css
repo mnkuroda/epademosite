@@ -950,6 +950,119 @@ a:hover {
 }
 
 /* Calendar page */
+.events-page-layout {
+  display: grid;
+  grid-template-columns: minmax(300px, 400px) 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.events-upcoming-header,
+.events-calendar-header {
+  margin-bottom: 1.25rem;
+}
+
+.events-upcoming-header h2,
+.events-calendar-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--color-navy);
+  margin: 0 0 0.35rem;
+}
+
+.events-upcoming-header p,
+.events-calendar-header p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-muted);
+}
+
+.events-upcoming-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-height: calc(100vh - var(--nav-height) - 4rem);
+  overflow-y: auto;
+  padding-right: 0.25rem;
+}
+
+.event-flyer-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.event-flyer-card:hover {
+  border-color: var(--color-blue);
+  box-shadow: var(--shadow-md);
+}
+
+.event-flyer-card-image {
+  background: var(--color-bg);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.event-flyer-card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.event-flyer-card-body {
+  padding: 1rem 1.1rem 1.15rem;
+}
+
+.event-flyer-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.event-flyer-card-body h3 {
+  font-size: 1.05rem;
+  color: var(--color-navy);
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+}
+
+.event-flyer-card-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.event-flyer-card-location {
+  margin-top: 0.5rem !important;
+  font-size: 0.85rem !important;
+  color: var(--color-text) !important;
+}
+
+.events-upcoming-empty {
+  padding: 2rem 1rem;
+  text-align: center;
+  color: var(--color-muted);
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius);
+  margin: 0;
+}
+
+.events-calendar-panel {
+  position: sticky;
+  top: calc(var(--nav-height) + 1rem);
+}
+
 .cal-page-layout {
   display: grid;
   grid-template-columns: 1fr 360px;
@@ -1861,6 +1974,19 @@ a:hover {
 
   .cal-page-layout {
     grid-template-columns: 1fr;
+  }
+
+  .events-page-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .events-upcoming-list {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .events-calendar-panel {
+    position: static;
   }
 
   .cal-sidebar {
